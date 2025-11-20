@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Plus, Building } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { StudioCard } from '../components/owner';
+import { OwnerSidebar } from '../components/layout';
 
 interface Studio {
   id: string;
@@ -38,8 +39,11 @@ export function OwnerStudios() {
   const [studios] = useState<Studio[]>(mockStudios);
 
   return (
-    <div className="min-h-screen bg-white py-6">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 flex">
+      <OwnerSidebar />
+      <div className="flex-1 ml-64 min-h-screen">
+        <div className="bg-white py-6">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
@@ -73,6 +77,8 @@ export function OwnerStudios() {
             </Link>
           </div>
         )}
+          </div>
+        </div>
       </div>
     </div>
   );

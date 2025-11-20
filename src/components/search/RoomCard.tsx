@@ -35,7 +35,7 @@ export function RoomCard({ room, distance }: RoomCardProps) {
           >
             <Heart
               className={`w-5 h-5 ${
-                isFavorite ? 'fill-[#FF385C] text-[#FF385C]' : 'text-gray-700'
+                isFavorite ? 'fill-brand-blue text-brand-blue' : 'text-gray-700'
               }`}
             />
           </button>

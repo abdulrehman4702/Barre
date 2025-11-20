@@ -21,9 +21,9 @@ export function Button({
 }: ButtonProps) {
   const baseClasses = 'font-medium transition-colors rounded-lg';
   const variantClasses = {
-    primary: 'bg-[#FF385C] text-white hover:bg-[#E61E4D]',
-    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
-    outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50',
+    primary: 'bg-brand-blue text-white hover:bg-brand-blue-dark',
+    secondary: 'bg-gray-200 text-brand-grey hover:bg-gray-300',
+    outline: 'border border-gray-300 text-brand-grey hover:bg-gray-50',
   };
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',

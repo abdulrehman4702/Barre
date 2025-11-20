@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Save } from 'lucide-react';
 import { useState } from 'react';
+import { OwnerSidebar } from '../components/layout';
 
 export function OwnerStudioEdit() {
   const { id } = useParams<{ id: string }>();
@@ -18,11 +19,14 @@ export function OwnerStudioEdit() {
   };
 
   return (
-    <div className="min-h-screen bg-white py-6">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 flex">
+      <OwnerSidebar />
+      <div className="flex-1 ml-64 min-h-screen">
+        <div className="bg-white py-6">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
         <Link
           to={`/owner/studios/${id}`}
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-[#FF385C] transition-colors mb-4"
+          className="inline-flex items-center gap-2 text-gray-600 hover:text-brand-blue transition-colors mb-4"
         >
           <ArrowLeft className="w-4 h-4" />
           <span className="text-sm font-medium">Back to Studio</span>
@@ -41,7 +45,7 @@ export function OwnerStudioEdit() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue"
                 />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -52,7 +56,7 @@ export function OwnerStudioEdit() {
                     required
                     value={formData.address}
                     onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue"
                   />
                 </div>
                 <div>
@@ -62,7 +66,7 @@ export function OwnerStudioEdit() {
                     required
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue"
                   />
                 </div>
               </div>
@@ -73,7 +77,7 @@ export function OwnerStudioEdit() {
                   required
                   value={formData.country}
                   onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue"
                 />
               </div>
               <div>
@@ -83,7 +87,7 @@ export function OwnerStudioEdit() {
                   rows={4}
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] resize-none"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue resize-none"
                 />
               </div>
             </div>
@@ -102,6 +106,8 @@ export function OwnerStudioEdit() {
             </button>
           </div>
         </form>
+          </div>
+        </div>
       </div>
     </div>
   );

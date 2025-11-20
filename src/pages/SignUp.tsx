@@ -109,7 +109,7 @@ export function SignUp() {
                   id="role"
                   value={role}
                   onChange={(e) => setRole(e.target.value as UserRole)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent appearance-none bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent appearance-none bg-white"
                 >
                   <option value="renter">Rent spaces</option>
                   <option value="owner">List my studio</option>
@@ -130,7 +130,7 @@ export function SignUp() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                   placeholder="Enter your email"
                 />
               </div>
@@ -149,7 +149,7 @@ export function SignUp() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                   placeholder="Create a password"
                 />
                 <button
@@ -175,7 +175,7 @@ export function SignUp() {
                   required
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                   placeholder="Confirm your password"
                 />
                 <button
@@ -194,15 +194,15 @@ export function SignUp() {
                 name="terms"
                 type="checkbox"
                 required
-                className="h-4 w-4 text-[#FF385C] focus:ring-[#FF385C] border-gray-300 rounded"
+                className="h-4 w-4 text-brand-blue focus:ring-brand-blue border-gray-300 rounded"
               />
               <label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
                 I agree to the{' '}
-                <Link to="/terms" className="text-[#FF385C] hover:text-[#E61E4D]">
+                <Link to="/terms" className="text-brand-blue hover:text-brand-blue-dark">
                   Terms of Service
                 </Link>{' '}
                 and{' '}
-                <Link to="/privacy" className="text-[#FF385C] hover:text-[#E61E4D]">
+                <Link to="/privacy" className="text-brand-blue hover:text-brand-blue-dark">
                   Privacy Policy
                 </Link>
               </label>
@@ -210,7 +210,7 @@ export function SignUp() {
 
             <button
               type="submit"
-              className="w-full bg-[#FF385C] hover:bg-[#E61E4D] text-white font-medium py-3 px-4 rounded-lg transition-colors"
+              className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white font-medium py-3 px-4 rounded-lg transition-colors"
             >
               Continue
             </button>
@@ -219,7 +219,7 @@ export function SignUp() {
           {/* Sign In Link */}
           <div className="mt-6 text-center text-sm">
             <span className="text-gray-600">Already have an account? </span>
-            <Link to="/signin" className="text-[#FF385C] hover:text-[#E61E4D] font-medium">
+            <Link to="/signin" className="text-brand-blue hover:text-brand-blue-dark font-medium">
               Sign in
             </Link>
           </div>

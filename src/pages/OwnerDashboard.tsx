@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Plus, Building, Calendar, DollarSign, TrendingUp, ArrowRight, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { OwnerSidebar } from '../components/layout';
 
 export function OwnerDashboard() {
   const [stats] = useState({
@@ -32,8 +33,11 @@ export function OwnerDashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-white py-6">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 flex">
+      <OwnerSidebar />
+      <div className="flex-1 ml-64 min-h-screen">
+        <div className="bg-white py-6">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
@@ -127,7 +131,7 @@ export function OwnerDashboard() {
               <h2 className="text-xl font-semibold text-gray-900">Recent Bookings</h2>
               <Link
                 to="/owner/bookings"
-                className="text-sm text-[#FF385C] hover:text-[#E61E4D] font-medium flex items-center gap-1"
+                className="text-sm text-brand-blue hover:text-brand-blue-dark font-medium flex items-center gap-1"
               >
                 View All <ArrowRight className="w-4 h-4" />
               </Link>
@@ -182,7 +186,7 @@ export function OwnerDashboard() {
                   </div>
                   <span className="font-medium text-gray-900">Manage Studios</span>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#FF385C] transition-colors" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-brand-blue transition-colors" />
               </Link>
               <Link
                 to="/owner/bookings"
@@ -194,7 +198,7 @@ export function OwnerDashboard() {
                   </div>
                   <span className="font-medium text-gray-900">View All Bookings</span>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#FF385C] transition-colors" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-brand-blue transition-colors" />
               </Link>
               <Link
                 to="/owner/payouts"
@@ -206,9 +210,11 @@ export function OwnerDashboard() {
                   </div>
                   <span className="font-medium text-gray-900">Payouts</span>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#FF385C] transition-colors" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-brand-blue transition-colors" />
               </Link>
             </div>
+          </div>
+        </div>
           </div>
         </div>
       </div>

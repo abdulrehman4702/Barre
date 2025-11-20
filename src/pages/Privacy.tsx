@@ -7,7 +7,7 @@ export function Privacy() {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-[#FF385C] rounded-full mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-brand-blue rounded-full mb-6">
               <Shield className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
@@ -89,7 +89,7 @@ export function Privacy() {
               </ul>
               <p className="text-gray-700 leading-relaxed mt-4">
                 To exercise these rights, please contact us at{' '}
-                <a href="mailto:privacy@barrebooking.com" className="text-[#FF385C] hover:text-[#E61E4D]">
+                <a href="mailto:privacy@barrebooking.com" className="text-brand-blue hover:text-brand-blue-dark">
                   privacy@barrebooking.com
                 </a>
               </p>
@@ -115,7 +115,7 @@ export function Privacy() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Contact Us</h2>
               <p className="text-gray-700 leading-relaxed">
                 If you have any questions about this Privacy Policy, please contact us at{' '}
-                <a href="mailto:privacy@barrebooking.com" className="text-[#FF385C] hover:text-[#E61E4D]">
+                <a href="mailto:privacy@barrebooking.com" className="text-brand-blue hover:text-brand-blue-dark">
                   privacy@barrebooking.com
                 </a>
               </p>

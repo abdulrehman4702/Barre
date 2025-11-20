@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { DollarSign, TrendingUp, Download, CheckCircle, Clock, XCircle } from 'lucide-react';
 import { format } from 'date-fns';
+import { OwnerSidebar } from '../components/layout';
 
 interface Payout {
   id: string;
@@ -44,8 +45,11 @@ export function OwnerPayouts() {
   const pendingAmount = payouts.filter((p) => p.status === 'pending').reduce((sum, p) => sum + p.amount, 0);
 
   return (
-    <div className="min-h-screen bg-white py-6">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 flex">
+      <OwnerSidebar />
+      <div className="flex-1 ml-64 min-h-screen">
+        <div className="bg-white py-6">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Payouts</h1>
@@ -153,6 +157,8 @@ export function OwnerPayouts() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
           </div>
         </div>
       </div>

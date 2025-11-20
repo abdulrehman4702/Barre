@@ -30,7 +30,7 @@ export function StudiosTab({ studios, searchTerm, onSearchChange }: StudiosTabPr
               placeholder="Search studios..."
               value={searchTerm}
               onChange={(e) => onSearchChange(e.target.value)}
-              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]"
+              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue"
             />
           </div>
         </div>

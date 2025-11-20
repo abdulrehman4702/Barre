@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import type { Booking } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import { format } from 'date-fns';
+import { RenterSidebar } from '../components/layout';
 
 // Mock data
 const mockBookings: Booking[] = [
@@ -72,13 +73,16 @@ export function Bookings() {
 
 
   return (
-    <div className="min-h-screen bg-white py-6">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 flex">
+      <RenterSidebar />
+      <div className="flex-1 ml-64 min-h-screen">
+        <div className="bg-white py-6">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-6">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-[#FF385C] transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-brand-blue transition-colors mb-4"
           >
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm">Back to Home</span>
@@ -93,39 +97,39 @@ export function Bookings() {
             onClick={() => setActiveTab('upcoming')}
             className={`px-6 py-3 font-medium transition-colors relative ${
               activeTab === 'upcoming'
-                ? 'text-[#FF385C]'
+                ? 'text-brand-blue'
                 : 'text-gray-600 hover:text-gray-900'
             }`}
           >
             {t('booking.upcoming')}
             {activeTab === 'upcoming' && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#FF385C]"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-blue"></span>
             )}
           </button>
           <button
             onClick={() => setActiveTab('past')}
             className={`px-6 py-3 font-medium transition-colors relative ${
               activeTab === 'past'
-                ? 'text-[#FF385C]'
+                ? 'text-brand-blue'
                 : 'text-gray-600 hover:text-gray-900'
             }`}
           >
             {t('booking.past')}
             {activeTab === 'past' && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#FF385C]"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-blue"></span>
             )}
           </button>
           <button
             onClick={() => setActiveTab('cancelled')}
             className={`px-6 py-3 font-medium transition-colors relative ${
               activeTab === 'cancelled'
-                ? 'text-[#FF385C]'
+                ? 'text-brand-blue'
                 : 'text-gray-600 hover:text-gray-900'
             }`}
           >
             {t('booking.cancelled')}
             {activeTab === 'cancelled' && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#FF385C]"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-blue"></span>
             )}
           </button>
         </div>
@@ -139,7 +143,7 @@ export function Bookings() {
               <p className="text-gray-400 text-sm">You don't have any {activeTab} bookings yet.</p>
               <Link
                 to="/"
-                className="inline-block mt-6 text-[#FF385C] hover:text-[#E61E4D] font-medium"
+                className="inline-block mt-6 text-brand-blue hover:text-brand-blue-dark font-medium"
               >
                 Browse available spaces →
               </Link>
@@ -188,7 +192,7 @@ export function Bookings() {
 
                   <div className="flex flex-col lg:items-end gap-4">
                     <div className="text-right">
-                      <div className="text-3xl font-bold text-[#FF385C] mb-2">
+                      <div className="text-3xl font-bold text-brand-blue mb-2">
                         €{(booking.total_amount + booking.service_fee).toFixed(2)}
                       </div>
                       <span
@@ -217,7 +221,7 @@ export function Bookings() {
                         </button>
                         <Link
                           to={`/invoices/${booking.id}`}
-                          className="flex items-center gap-2 px-4 py-2 bg-[#FF385C] text-white rounded-lg hover:bg-[#E61E4D] transition-colors text-sm font-medium"
+                          className="flex items-center gap-2 px-4 py-2 bg-brand-blue text-white rounded-lg hover:bg-brand-blue-dark transition-colors text-sm font-medium"
                         >
                           <FileText className="w-4 h-4" />
                           <span>{t('booking.viewInvoice')}</span>
@@ -238,6 +242,8 @@ export function Bookings() {
               </Link>
             ))
           )}
+        </div>
+          </div>
         </div>
       </div>
     </div>

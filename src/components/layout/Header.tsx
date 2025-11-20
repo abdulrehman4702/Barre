@@ -41,8 +41,12 @@ export function Header({ onSearch }: HeaderProps) {
     <header className="bg-white border-b border-gray-200 sticky top-0 z-[50] backdrop-blur-sm bg-white/95">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
-          <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
-            <span className="text-2xl font-bold text-[#FF385C]">BarreBooking</span>
+          <Link to="/" className="flex items-center space-x-2 flex-shrink-0 hover:opacity-90 transition-opacity">
+            <img 
+              src="/logo.png" 
+              alt="BarreBooking" 
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* Search Bar in Header - Hidden on auth pages */}
@@ -90,7 +94,7 @@ export function Header({ onSearch }: HeaderProps) {
               </div>
               <button
                 onClick={handleSearch}
-                className="bg-[#FF385C] hover:bg-[#E61E4D] text-white rounded-full p-2 flex items-center justify-center transition-colors flex-shrink-0"
+                className="bg-brand-blue hover:bg-brand-blue-dark text-white rounded-full p-2 flex items-center justify-center transition-colors flex-shrink-0"
               >
                 <Search className="w-4 h-4" />
               </button>
@@ -103,7 +107,7 @@ export function Header({ onSearch }: HeaderProps) {
             <div className="hidden md:flex items-center">
               <Link
                 to="/"
-                className="flex items-center gap-2 text-gray-700 hover:text-[#FF385C] transition-colors px-4 py-2 rounded-lg hover:bg-gray-50"
+                className="flex items-center gap-2 text-brand-grey hover:text-brand-blue transition-colors px-4 py-2 rounded-lg hover:bg-gray-50"
               >
                 <Home className="w-5 h-5" />
                 <span className="text-sm font-medium">Home</span>
@@ -114,7 +118,7 @@ export function Header({ onSearch }: HeaderProps) {
           <div className="flex items-center space-x-4 flex-shrink-0">
             <button
               onClick={toggleLanguage}
-              className="hidden md:block p-2 text-gray-600 hover:text-[#FF385C] transition-colors"
+              className="hidden md:block p-2 text-gray-600 hover:text-brand-blue transition-colors"
               title={language === 'en' ? 'Deutsch' : 'English'}
             >
               <Globe className="w-5 h-5" />
@@ -131,7 +135,7 @@ export function Header({ onSearch }: HeaderProps) {
               </div>
             ) : (
               <div className="hidden md:flex items-center space-x-3">
-                <Link to="/signin" className="text-sm text-gray-600 hover:text-[#FF385C] transition-colors px-3 py-2">
+                <Link to="/signin" className="text-sm text-gray-600 hover:text-brand-blue transition-colors px-3 py-2">
                   {t('nav.signin')}
                 </Link>
                 <Link to="/signup" className="btn-primary text-sm px-4 py-2">
@@ -154,7 +158,7 @@ export function Header({ onSearch }: HeaderProps) {
             <nav className="flex flex-col space-y-4">
               <Link
                 to="/"
-                className="flex items-center gap-2 text-gray-700 hover:text-[#FF385C] transition-colors"
+                className="flex items-center gap-2 text-brand-grey hover:text-brand-blue transition-colors"
               >
                 <Home className="w-5 h-5" />
                 <span>{t('nav.home')}</span>
@@ -162,23 +166,23 @@ export function Header({ onSearch }: HeaderProps) {
               {isAuthenticated && (
                 <>
                   {user?.role === 'renter' && (
-                    <Link to="/bookings" className="text-gray-700 hover:text-primary-600">
+                    <Link to="/bookings" className="text-gray-700 hover:text-brand-blue">
                       {t('nav.bookings')}
                     </Link>
                   )}
                   {user?.role === 'owner' && (
-                    <Link to="/owner/dashboard" className="text-gray-700 hover:text-primary-600">
+                    <Link to="/owner/dashboard" className="text-gray-700 hover:text-brand-blue">
                       {t('nav.studios')}
                     </Link>
                   )}
                   {user?.role === 'admin' && (
-                    <Link to="/admin" className="text-gray-700 hover:text-primary-600">
+                    <Link to="/admin" className="text-gray-700 hover:text-brand-blue">
                       {t('nav.admin')}
                     </Link>
                   )}
                   <div className="pt-4 border-t border-gray-200">
                     <span className="text-sm text-gray-600">{user?.email}</span>
-                    <button className="block mt-2 text-sm text-gray-600 hover:text-primary-600">
+                    <button className="block mt-2 text-sm text-gray-600 hover:text-brand-blue">
                       {t('nav.signout')}
                     </button>
                   </div>
@@ -186,7 +190,7 @@ export function Header({ onSearch }: HeaderProps) {
               )}
               {!isAuthenticated && (
                 <>
-                  <Link to="/signin" className="text-gray-700 hover:text-primary-600">
+                  <Link to="/signin" className="text-gray-700 hover:text-brand-blue">
                     {t('nav.signin')}
                   </Link>
                   <Link to="/signup" className="btn-primary text-center">

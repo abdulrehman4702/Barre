@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowLeft, Upload } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { OwnerSidebar } from '../components/layout';
 
 export function OwnerStudioNew() {
   const [formData, setFormData] = useState({
@@ -19,14 +20,17 @@ export function OwnerStudioNew() {
   };
 
   return (
-    <div className="min-h-screen bg-white py-6">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gray-50 flex">
+      <OwnerSidebar />
+      <div className="flex-1 ml-64 min-h-screen">
+        <div className="bg-white py-6">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="mb-6">
             <Link
               to="/owner/studios"
-              className="inline-flex items-center gap-2 text-gray-600 hover:text-[#FF385C] transition-colors mb-4"
+              className="inline-flex items-center gap-2 text-gray-600 hover:text-brand-blue transition-colors mb-4"
             >
               <ArrowLeft className="w-4 h-4" />
               <span className="text-sm font-medium">Back to Studios</span>
@@ -51,7 +55,7 @@ export function OwnerStudioNew() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                     placeholder="e.g., Bright Dance Studio"
                   />
                 </div>
@@ -67,7 +71,7 @@ export function OwnerStudioNew() {
                       required
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                       placeholder="Street address"
                     />
                   </div>
@@ -81,7 +85,7 @@ export function OwnerStudioNew() {
                       required
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                       placeholder="City"
                     />
                   </div>
@@ -97,7 +101,7 @@ export function OwnerStudioNew() {
                     required
                     value={formData.country}
                     onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                     placeholder="Country"
                   />
                 </div>
@@ -112,7 +116,7 @@ export function OwnerStudioNew() {
                     rows={5}
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent resize-none"
                     placeholder="Describe your studio..."
                   />
                 </div>
@@ -121,7 +125,7 @@ export function OwnerStudioNew() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Photos
                   </label>
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-[#FF385C] transition-colors">
+                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-brand-blue transition-colors">
                     <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                     <p className="text-gray-600 mb-2">Click to upload or drag and drop</p>
                     <p className="text-sm text-gray-500">PNG, JPG up to 10MB</p>
@@ -147,6 +151,8 @@ export function OwnerStudioNew() {
               </button>
             </div>
           </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>

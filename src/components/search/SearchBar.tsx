@@ -65,7 +65,7 @@ export function SearchBar({ onSearch, initialFilters }: SearchBarProps) {
       </div>
       <button
         onClick={handleSearch}
-        className="bg-[#FF385C] hover:bg-[#E61E4D] text-white rounded-full p-3 flex items-center justify-center transition-colors flex-shrink-0"
+        className="bg-brand-blue hover:bg-brand-blue-dark text-white rounded-full p-3 flex items-center justify-center transition-colors flex-shrink-0"
       >
         <Search className="w-5 h-5" />
       </button>

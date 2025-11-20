@@ -11,6 +11,7 @@ export { OwnerStudioEdit } from './OwnerStudioEdit';
 export { OwnerStudioNew } from './OwnerStudioNew';
 export { OwnerBookings } from './OwnerBookings';
 export { OwnerPayouts } from './OwnerPayouts';
+export { OwnerSettings } from './OwnerSettings';
 export { AdminPanel } from './AdminPanel';
 export { Help } from './Help';
 export { Contact } from './Contact';

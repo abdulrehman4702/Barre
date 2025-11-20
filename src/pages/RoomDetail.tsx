@@ -65,7 +65,7 @@ export function RoomDetail() {
         {/* Back Button */}
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-[#FF385C] transition-colors mb-6"
+          className="inline-flex items-center gap-2 text-gray-600 hover:text-brand-blue transition-colors mb-6"
         >
           <ArrowLeft className="w-4 h-4" />
           <span className="text-sm font-medium">Back to search</span>
@@ -85,7 +85,7 @@ export function RoomDetail() {
             className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
           >
             <Heart
-              className={`w-4 h-4 ${isFavorite ? 'fill-[#FF385C] text-[#FF385C]' : ''}`}
+              className={`w-4 h-4 ${isFavorite ? 'fill-brand-blue text-brand-blue' : ''}`}
             />
             <span className="text-sm font-medium">Save</span>
           </button>

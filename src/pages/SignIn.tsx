@@ -104,7 +104,7 @@ export function SignIn() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                   placeholder="Enter your email"
                 />
               </div>
@@ -123,7 +123,7 @@ export function SignIn() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                   placeholder="Enter your password"
                 />
                 <button
@@ -142,20 +142,20 @@ export function SignIn() {
                   id="remember"
                   name="remember"
                   type="checkbox"
-                  className="h-4 w-4 text-[#FF385C] focus:ring-[#FF385C] border-gray-300 rounded"
+                  className="h-4 w-4 text-brand-blue focus:ring-brand-blue border-gray-300 rounded"
                 />
                 <label htmlFor="remember" className="ml-2 block text-sm text-gray-700">
                   Remember me
                 </label>
               </div>
-              <Link to="/forgot-password" className="text-sm text-[#FF385C] hover:text-[#E61E4D]">
+              <Link to="/forgot-password" className="text-sm text-brand-blue hover:text-brand-blue-dark">
                 Forgot password?
               </Link>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-[#FF385C] hover:bg-[#E61E4D] text-white font-medium py-3 px-4 rounded-lg transition-colors"
+              className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white font-medium py-3 px-4 rounded-lg transition-colors"
             >
               Continue
             </button>
@@ -164,7 +164,7 @@ export function SignIn() {
           {/* Sign Up Link */}
           <div className="mt-6 text-center text-sm">
             <span className="text-gray-600">Don't have an account? </span>
-            <Link to="/signup" className="text-[#FF385C] hover:text-[#E61E4D] font-medium">
+            <Link to="/signup" className="text-brand-blue hover:text-brand-blue-dark font-medium">
               Sign up
             </Link>
           </div>

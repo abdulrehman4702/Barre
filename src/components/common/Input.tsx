@@ -22,7 +22,7 @@ export function Input({ label, error, icon, className = '', ...props }: InputPro
           {...props}
           className={`w-full ${icon ? 'pl-10' : 'pl-4'} pr-4 py-3 border ${
             error ? 'border-red-300' : 'border-gray-300'
-          } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent ${className}`}
+          } rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent ${className}`}
         />
       </div>
       {error && <p className="mt-1 text-sm text-red-600">{error}</p>}

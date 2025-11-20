@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Edit, Plus, Building, MapPin, Eye, BarChart3, Activity, Droplet } from 'lucide-react';
 import { useState } from 'react';
+import { OwnerSidebar } from '../components/layout';
 
 interface Room {
   id: string;
@@ -50,11 +51,14 @@ export function OwnerStudioDetail() {
   const [rooms] = useState<Room[]>(mockRooms);
 
   return (
-    <div className="min-h-screen bg-white py-6">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 flex">
+      <OwnerSidebar />
+      <div className="flex-1 ml-64 min-h-screen">
+        <div className="bg-white py-6">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
         <Link
           to="/owner/studios"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-[#FF385C] transition-colors mb-4"
+          className="inline-flex items-center gap-2 text-gray-600 hover:text-brand-blue transition-colors mb-4"
         >
           <ArrowLeft className="w-4 h-4" />
           <span className="text-sm font-medium">Back to Studios</span>
@@ -144,6 +148,8 @@ export function OwnerStudioDetail() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
           </div>
         </div>
       </div>

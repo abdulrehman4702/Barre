@@ -36,7 +36,7 @@ export function Contact() {
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
               <p className="text-gray-600 text-sm mb-2">Send us an email anytime</p>
-              <a href="mailto:support@barrebooking.com" className="text-[#FF385C] hover:text-[#E61E4D] font-medium">
+              <a href="mailto:support@barrebooking.com" className="text-brand-blue hover:text-brand-blue-dark font-medium">
                 support@barrebooking.com
               </a>
             </div>
@@ -47,7 +47,7 @@ export function Contact() {
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
               <p className="text-gray-600 text-sm mb-2">Mon-Fri from 9am to 6pm</p>
-              <a href="tel:+491234567890" className="text-[#FF385C] hover:text-[#E61E4D] font-medium">
+              <a href="tel:+491234567890" className="text-brand-blue hover:text-brand-blue-dark font-medium">
                 +49 123 456 7890
               </a>
             </div>
@@ -80,7 +80,7 @@ export function Contact() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                       placeholder="Your name"
                     />
                   </div>
@@ -94,7 +94,7 @@ export function Contact() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -109,7 +109,7 @@ export function Contact() {
                     required
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -123,7 +123,7 @@ export function Contact() {
                     rows={6}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent resize-none"
                     placeholder="Tell us more about your inquiry..."
                   />
                 </div>

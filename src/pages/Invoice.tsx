@@ -53,7 +53,7 @@ export function Invoice() {
         <div className="max-w-4xl mx-auto">
           <Link
             to="/bookings"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-[#FF385C] transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-brand-blue transition-colors mb-4"
           >
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm font-medium">Back to Bookings</span>
@@ -64,7 +64,7 @@ export function Invoice() {
             <div className="flex items-start justify-between mb-8 pb-6 border-b-2 border-gray-300">
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-12 h-12 bg-[#FF385C] rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center">
                     <FileText className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -114,12 +114,12 @@ export function Invoice() {
             </div>
 
             {/* Booking Details */}
-            <div className="bg-gradient-to-r from-[#FF385C]/5 to-[#E61E4D]/5 rounded-lg p-5 mb-6 border border-[#FF385C]/10">
+            <div className="bg-gradient-to-r from-brand-blue/5 to-brand-blue-dark/5 rounded-lg p-5 mb-6 border border-brand-blue/10">
               <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wide">Booking Information</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-[#FF385C]/10 rounded-lg flex items-center justify-center">
-                    <Calendar className="w-4 h-4 text-[#FF385C]" />
+                  <div className="w-8 h-8 bg-brand-blue/10 rounded-lg flex items-center justify-center">
+                    <Calendar className="w-4 h-4 text-brand-blue" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Date</p>
@@ -127,8 +127,8 @@ export function Invoice() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-[#FF385C]/10 rounded-lg flex items-center justify-center">
-                    <Clock className="w-4 h-4 text-[#FF385C]" />
+                  <div className="w-8 h-8 bg-brand-blue/10 rounded-lg flex items-center justify-center">
+                    <Clock className="w-4 h-4 text-brand-blue" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Time</p>
@@ -136,8 +136,8 @@ export function Invoice() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-[#FF385C]/10 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-4 h-4 text-[#FF385C]" />
+                  <div className="w-8 h-8 bg-brand-blue/10 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-4 h-4 text-brand-blue" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Room</p>
@@ -145,8 +145,8 @@ export function Invoice() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-[#FF385C]/10 rounded-lg flex items-center justify-center">
-                    <FileText className="w-4 h-4 text-[#FF385C]" />
+                  <div className="w-8 h-8 bg-brand-blue/10 rounded-lg flex items-center justify-center">
+                    <FileText className="w-4 h-4 text-brand-blue" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Type</p>
@@ -201,7 +201,7 @@ export function Invoice() {
                   </div>
                   <div className="flex justify-between text-xl font-bold pt-4 border-t-2 border-gray-300">
                     <span className="text-gray-900">Total Amount</span>
-                    <span className="text-[#FF385C]">€{invoice.total.toFixed(2)}</span>
+                    <span className="text-brand-blue">€{invoice.total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>

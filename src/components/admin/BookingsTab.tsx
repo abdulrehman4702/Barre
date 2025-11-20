@@ -30,7 +30,7 @@ export function BookingsTab({ bookings, searchTerm, onSearchChange }: BookingsTa
               placeholder="Search bookings..."
               value={searchTerm}
               onChange={(e) => onSearchChange(e.target.value)}
-              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]"
+              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue"
             />
           </div>
           <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
@@ -72,7 +72,7 @@ export function BookingsTab({ bookings, searchTerm, onSearchChange }: BookingsTa
                   </span>
                 </td>
                 <td className="px-4 py-3">
-                  <button className="p-1 text-gray-600 hover:text-[#FF385C]">
+                  <button className="p-1 text-gray-600 hover:text-brand-blue">
                     <Eye className="w-4 h-4" />
                   </button>
                 </td>

@@ -143,7 +143,7 @@ export function BookingWidget({ room, onBook }: BookingWidgetProps) {
               onClick={() => setBookingType('individual')}
               className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                 bookingType === 'individual'
-                  ? 'bg-primary-600 text-white'
+                  ? 'bg-brand-blue text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -153,7 +153,7 @@ export function BookingWidget({ room, onBook }: BookingWidgetProps) {
               onClick={() => setBookingType('group')}
               className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                 bookingType === 'group'
-                  ? 'bg-primary-600 text-white'
+                  ? 'bg-brand-blue text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -179,7 +179,7 @@ export function BookingWidget({ room, onBook }: BookingWidgetProps) {
               </div>
               <div className="flex justify-between font-semibold text-lg pt-2 border-t border-gray-200">
                 <span>Total</span>
-                <span className="text-primary-600">€{totalPrice.toFixed(2)}</span>
+                <span className="text-brand-blue">€{totalPrice.toFixed(2)}</span>
               </div>
             </div>
           </div>

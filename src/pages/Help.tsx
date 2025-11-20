@@ -65,7 +65,7 @@ export function Help() {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-[#FF385C] rounded-full mb-6">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-brand-blue rounded-full mb-6">
             <HelpCircle className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Help Center</h1>
@@ -83,7 +83,7 @@ export function Help() {
               placeholder="Search for help..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent text-lg"
+              className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent text-lg"
             />
           </div>
         </div>
@@ -96,7 +96,7 @@ export function Help() {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 selectedCategory === category
-                  ? 'bg-[#FF385C] text-white'
+                  ? 'bg-brand-blue text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -140,7 +140,7 @@ export function Help() {
         </div>
 
         {/* Contact Support */}
-        <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#FF385C] to-[#E61E4D] rounded-2xl p-8 text-white">
+        <div className="max-w-4xl mx-auto bg-gradient-to-br from-brand-blue to-brand-blue-dark rounded-2xl p-8 text-white">
           <div className="text-center mb-6">
             <h2 className="text-2xl font-bold mb-2">Still need help?</h2>
             <p className="text-white/90">Our support team is here to assist you</p>
@@ -148,7 +148,7 @@ export function Help() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-[#FF385C] rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-brand-blue rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
               <Mail className="w-5 h-5" />
               <span>Contact Us</span>

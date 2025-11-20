@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, MapPin, User, FileText, X, Share2 } from 'lucide-react';
 import { format } from 'date-fns';
+import { RenterSidebar } from '../components/layout';
 
 export function BookingDetail() {
   const { id } = useParams<{ id: string }>();
@@ -31,12 +32,15 @@ export function BookingDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-white py-6">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gray-50 flex">
+      <RenterSidebar />
+      <div className="flex-1 ml-64 min-h-screen">
+        <div className="bg-white py-6">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
           <Link
             to="/bookings"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-[#FF385C] transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-brand-blue transition-colors mb-4"
           >
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm font-medium">Back to Bookings</span>
@@ -113,7 +117,7 @@ export function BookingDetail() {
                   </div>
                   <div className="flex justify-between font-bold text-lg pt-2 border-t border-gray-200">
                     <span>Total</span>
-                    <span className="text-[#FF385C]">€{booking.total.toFixed(2)}</span>
+                    <span className="text-brand-blue">€{booking.total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
@@ -138,6 +142,8 @@ export function BookingDetail() {
                   </Link>
                 </>
               )}
+            </div>
+          </div>
             </div>
           </div>
         </div>

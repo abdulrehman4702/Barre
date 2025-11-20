@@ -29,7 +29,7 @@ export function UsersTab({ users, searchTerm, onSearchChange }: UsersTabProps) {
               placeholder="Search users..."
               value={searchTerm}
               onChange={(e) => onSearchChange(e.target.value)}
-              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]"
+              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue"
             />
           </div>
         </div>
@@ -51,7 +51,7 @@ export function UsersTab({ users, searchTerm, onSearchChange }: UsersTabProps) {
               <tr key={user.id} className="hover:bg-gray-50">
                 <td className="px-4 py-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-[#FF385C] rounded-full flex items-center justify-center text-white font-semibold">
+                    <div className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white font-semibold">
                       {user.name.charAt(0)}
                     </div>
                     <span className="text-sm font-medium text-gray-900">{user.name}</span>
@@ -75,7 +75,7 @@ export function UsersTab({ users, searchTerm, onSearchChange }: UsersTabProps) {
                 </td>
                 <td className="px-4 py-3">
                   <div className="flex gap-2">
-                    <button className="p-1 text-gray-600 hover:text-[#FF385C]">
+                    <button className="p-1 text-gray-600 hover:text-brand-blue">
                       <Eye className="w-4 h-4" />
                     </button>
                     <button className="p-1 text-gray-600 hover:text-red-600">

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Calendar, Clock, MapPin, User, Search, Filter, Download } from 'lucide-react';
 import { format } from 'date-fns';
+import { OwnerSidebar } from '../components/layout';
 
 interface OwnerBooking {
   id: string;
@@ -53,8 +54,11 @@ export function OwnerBookings() {
   );
 
   return (
-    <div className="min-h-screen bg-white py-6">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 flex">
+      <OwnerSidebar />
+      <div className="flex-1 ml-64 min-h-screen">
+        <div className="bg-white py-6">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Bookings</h1>
@@ -70,7 +74,7 @@ export function OwnerBookings() {
               placeholder="Search by room or customer..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
             />
           </div>
           <button className="flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
@@ -100,7 +104,7 @@ export function OwnerBookings() {
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                   <div className="flex-1">
                     <div className="flex items-start gap-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#FF385C] to-[#E61E4D] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-16 h-16 bg-gradient-to-br from-brand-blue to-brand-blue-dark rounded-lg flex items-center justify-center flex-shrink-0">
                         <Calendar className="w-8 h-8 text-white" />
                       </div>
                       <div className="flex-1">
@@ -133,7 +137,7 @@ export function OwnerBookings() {
 
                   <div className="flex flex-col lg:items-end gap-4">
                     <div className="text-right">
-                      <div className="text-3xl font-bold text-[#FF385C] mb-2">
+                      <div className="text-3xl font-bold text-brand-blue mb-2">
                         €{booking.amount.toFixed(2)}
                       </div>
                       <span
@@ -153,6 +157,8 @@ export function OwnerBookings() {
               </div>
             ))
           )}
+        </div>
+          </div>
         </div>
       </div>
     </div>

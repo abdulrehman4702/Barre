@@ -71,25 +71,25 @@ export function RoomDetails({ room }: RoomDetailsProps) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {room.has_mirrors && (
             <div className="flex items-center space-x-2">
-              <Eye className="w-5 h-5 text-primary-600" />
+              <Eye className="w-5 h-5 text-brand-blue" />
               <span>Mirrors</span>
             </div>
           )}
           {room.has_barres && (
             <div className="flex items-center space-x-2">
-              <BarChart3 className="w-5 h-5 text-primary-600" />
+              <BarChart3 className="w-5 h-5 text-brand-blue" />
               <span>Barres</span>
             </div>
           )}
           {room.has_mats && (
             <div className="flex items-center space-x-2">
-              <Activity className="w-5 h-5 text-primary-600" />
+              <Activity className="w-5 h-5 text-brand-blue" />
               <span>Mats</span>
             </div>
           )}
           {room.has_shower && (
             <div className="flex items-center space-x-2">
-              <Droplet className="w-5 h-5 text-primary-600" />
+              <Droplet className="w-5 h-5 text-brand-blue" />
               <span>Shower</span>
             </div>
           )}
